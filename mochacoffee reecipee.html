@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> .header {
+    background: black;
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form.active {
+    display: block;
+}
+
+.search-form input[type="search"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+body {
+            
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            align-items: center; /* Vertical alignment */
+            justify-content: space-around; /* Horizontal alignment */
+            padding-left: 200px;
+            padding-right:200px;
+        }
+
+        .content {
+            flex: 1; /* Take remaining space */
+            padding-right: 20px; /* Add some spacing */
+        }
+
+        .content h2 {
+            margin-top: 0;
+            font-size: 40px;
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .image {
+            flex: 1; /* Take remaining space */
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 700px;
+            height: 500px;
+            
+        }
+</style>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <!-- Add your logo image here -->
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="products_1.html">MENU</a>
+            <a href="#guide">GUIDE</a>
+            <a href="#faq">FAQs</a>
+            <a href="#review">REVIEW</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#blogs">BLOGS</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn" style="font-size:20px;"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn" style="font-size:20px;"></div>
+        </div>
+
+        <div class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="Search...">
+        </div>
+
+    </header>
+
+
+    <div class="container">
+        <div class="content">
+            <h2>How to Make Mocha</h2>
+        </div>
+        <div class="image">
+            <img src="mocha1.jpeg" alt="Sample Image">
+             
+</div>
+   
+    </div>
+
+    <div style="margin-left: 600px;margin-right: 100px;" >
+        <h2>Mocha: What it is and why we love it</h2>
+<p>Mocha or Mochaccino is a popular coffee drink, especially in winter, because it combines hot chocolate with espresso. The sweet chocolaty flavours underline the bitter-chocolaty notes of the espresso and result in a balanced and creamy taste experience.</p>
+</div>  
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>What you'll need</h2>
+        <ul>
+            <li>coffee machine</li>
+            <li>Mocha grinder</li>
+            <li>Scales and tamper</li>
+            <li>Timer</li>
+            <li>Coffee (roasted for espresso)</li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Recipe</h2>
+        <ul>Makes one strong coffee, or two weak coffees
+            <li>Ground coffee weight: 17-18g*</li>
+            <li>Beverage weight: 35-40g yield*</li>
+            <li>Brew (extraction) time: 28-32 seconds</li>
+            <li>Water temperature: 95°C</li>
+            <li>Grind size: fine  </li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Steps</h2>
+        <ol>
+            <li>Take the portafilter out of the group head of the espresso machine. Place it on a scale and measure the weight.
+            </li>
+            <li>Rinse the group head thoroughly with hot water.
+            </li>
+            <li>For a double shot, grind 18g of coffee into the portafilter. Put it back on the scale, put any excess powder in a glass or grind some more. The right grind is crucial for a balanced, delicious espresso. You may need to adjust the fineness a little. In general, the grind should be fine.
+            </li>
+            <li>Spread the coffee by dragging a finger over it. The most effective way is to alternate sides in 90 degree increments (top to bottom, then left to right, etc.).
+            </li>
+            <li>Place the portafilter on a clean, flat surface and position the tamper horizontally on the coffee grounds. Apply downward pressure without pressing your palm into the bottom of the tamper (which can cause wrist problems in the long run). You don't have to tamp incredibly hard - just enough to evenly trap the coffee. Turn the tamper slightly. This will smooth or 'polish' the coffee grounds for an even extraction.</li>
+       <li>Fill a cup with 2 tablespoons of cocoa powder and add a small dash of hot water. Stir until you get a kind of fine syrup. Alternatively, you can use a chocolate of your choice.</li>
+    <li>Place the portafilter in the group head and place the cup underneath. Start the water for the double espresso.</li>    
+<li>The extraction should start with a slow drip and then develop into a gentle, steady stream. Near the 30-second mark, the extraction ends. The shot thickens and starts to "blonde" or turn yellow (the crema, small bubbles, collects on the surface). Stop the shot as soon as this process starts.</li>  
+<li>At the same time, froth up about 150ml (alternative) milk.</li>
+<li>Sprinkle some cocoa powder on the espresso chocolate syrup and then pour the hot milk on top.</li>
+</ol>
+</div>
+
+
+    
+</body>
+</html>

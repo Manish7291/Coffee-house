@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> .header {
+    background: black;
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form.active {
+    display: block;
+}
+
+.search-form input[type="search"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+body {
+            
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            align-items: center; /* Vertical alignment */
+            justify-content: space-around; /* Horizontal alignment */
+            padding-left: 200px;
+            padding-right:200px;
+        }
+
+        .content {
+            flex: 1; /* Take remaining space */
+            padding-right: 20px; /* Add some spacing */
+        }
+
+        .content h2 {
+            margin-top: 0;
+            font-size: 40px;
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .image {
+            flex: 1; /* Take remaining space */
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 700px;
+            height: 500px;
+            
+        }
+</style>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <!-- Add your logo image here -->
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="products_1.html">MENU</a>
+            <a href="#guide">GUIDE</a>
+            <a href="#faq">FAQs</a>
+            <a href="#review">REVIEW</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#blogs">BLOGS</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn" style="font-size:20px;"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn" style="font-size:20px;"></div>
+        </div>
+
+        <div class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="Search...">
+        </div>
+
+    </header>
+
+
+    <div class="container">
+        <div class="content">
+            <h2>How to Make Plunger Coffee</h2>
+        </div>
+        <div class="image">
+            <img src="plungercoffee 2.jpeg" alt="Sample Image">
+             
+</div>
+   
+    </div>
+
+    <div style="margin-left: 600px;margin-right: 100px;" >
+        <h2>Plunger coffee: what it is and why we love it</h2>
+<p>The plunger is one of the simplest (and oldest) brew methods. It is composed of a cylinder – often made of glass – and a metal stem and mesh filter. Plungers are great for brewing for a group of people, they make it easy to produce consistent results, and they brew coffee that works well with or without milk – a crowd pleaser!</p>
+</div>  
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>What you'll need</h2>
+        <ul>
+            <li>Plunger</li>
+            <li>Kettle, scales and timer</li>
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Recipe</h2>
+        <ul>Makes 3-4 servings
+            <li>50g coffee (roasted for filter or espresso – see note below)</li>
+            <li>750g water</li>
+            <li>Total brew time: 4 minutes</li>
+            <li>Grind size: coarse</li>
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Steps</h2>
+        <ol>
+            <li>Start with at least 1L of fresh water and bring to the boil. 
+            </li>
+            <li>Swirl some hot water in the plunger to heat it up, and then empty. 
+            </li>
+            <li>Place your coffee in the bottom of the plunger, and then place the plunger on the scales and tare to zero
+            </li>
+            <li>Start your time, and pour in 750g of freshly boiled water. Let it brew for 1 minute, and then give it a good stir. Now let it brew for another 3 minutes.
+            </li>
+            <li>Plunge down with care and pour straight away.</li>
+        </ol>
+</div>
+
+
+    
+</body>
+</html>

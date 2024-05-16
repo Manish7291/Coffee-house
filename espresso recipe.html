@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> .header {
+    background: black;
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form.active {
+    display: block;
+}
+
+.search-form input[type="search"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+body {
+            
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            align-items: center; /* Vertical alignment */
+            justify-content: space-around; /* Horizontal alignment */
+            padding-left: 200px;
+            padding-right:200px;
+        }
+
+        .content {
+            flex: 1; /* Take remaining space */
+            padding-right: 20px; /* Add some spacing */
+        }
+
+        .content h2 {
+            margin-top: 0;
+            font-size: 40px;
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .image {
+            flex: 1; /* Take remaining space */
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 700px;
+            height: 500px;
+            
+        }
+</style>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <!-- Add your logo image here -->
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="products_1.html">MENU</a>
+            <a href="#guide">GUIDE</a>
+            <a href="#faq">FAQs</a>
+            <a href="#review">REVIEW</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#blogs">BLOGS</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn" style="font-size:20px;"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn" style="font-size:20px;"></div>
+        </div>
+
+        <div class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="Search...">
+        </div>
+
+    </header>
+
+
+    <div class="container">
+        <div class="content">
+            <h2>How to Make Espresso Coffee</h2>
+        </div>
+        <div class="image">
+            <img src="esspresso2.jpeg" alt="Sample Image">
+             
+</div>
+   
+    </div>
+
+    <div style="margin-left: 600px;margin-right: 100px;" >
+        <h2>Espresso: What it is and why we love it</h2>
+<p>An espresso machine forces pressurised, nearly boiling water through ground coffee, in order to produce a strong cup of coffee, quickly. Espresso packs a lot of flavour into a small drink, and it suits milk-based coffees really well, so if you want a delicious cappuccino or latte, brewing espresso at home is the way to go!</p>
+</div>  
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>What you'll need</h2>
+        <ul>
+            <li>Espresso machine</li>
+            <li>Espresso grinder</li>
+            <li>Scales and tamper</li>
+            <li>Timer</li>
+            <li>Coffee (roasted for espresso)</li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Recipe</h2>
+        <ul>Makes one strong coffee, or two weak coffees
+            <li>Ground coffee weight: 17-18g*</li>
+            <li>Beverage weight: 35-40g yield*</li>
+            <li>Brew (extraction) time: 28-32 seconds</li>
+            <li>Water temperature: 95°C</li>
+            <li>Grind size: fine  </li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Steps</h2>
+        <ol>
+            <li>Prepare the portafilter
+                <ul>
+                    <li>Remove portafilter. Clean and dry the basket.</li>
+                    <li>Purge the group head by allowing hot water to flow through. This clears the screen of any built-up coffee grounds.</li>
+                    <li>Place the portafilter on the scale and tare the scale to zero, then place the portafilter under the grinder to receive the coffee.</li>
+                </ul>
+            </li>
+            <li>Grind, dose and tamp
+                <ul>
+                    <li>Grind enough coffee to fill your portafilter basket and then check the weight on the scales.</li>
+                    <li>Make sure coffee is distributed evenly in the basket and use a tamper to press down the bed of coffee.</li>
+                    <li>There should be 3-4mm of space at the top of the portafilter after tamping.</li>
+                </ul>
+            </li>
+            <li>Brew
+                <ul>
+<li>Insert the portafilter into the espresso machine</li>
+<li>Place scales and cup below the portafilter, tare to zero and immediately start to brew.</li>
+<li>Stop the shot when the espresso is roughly double the weight of the ground coffee in the basket.</li>
+                </ul>
+            </li>
+            <li>Serve
+                <ul>
+                    <li>
+                        Serve your coffee immediately.
+                    </li>
+                    <li>Remove portafilter and knock out spent grounds.</li>
+                    <li>Pop the clean portafilter back into the machine to maintain its temperature.</li>
+                </ul>
+            </li>
+        </ol>
+</div>
+
+
+    
+</body>
+</html>

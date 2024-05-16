@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> .header {
+    background: black;
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form.active {
+    display: block;
+}
+
+.search-form input[type="search"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+body {
+            
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            align-items: center; /* Vertical alignment */
+            justify-content: space-around; /* Horizontal alignment */
+            padding-left: 200px;
+            padding-right:200px;
+        }
+
+        .content {
+            flex: 1; /* Take remaining space */
+            padding-right: 20px; /* Add some spacing */
+        }
+
+        .content h2 {
+            margin-top: 0;
+            font-size: 40px;
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .image {
+            flex: 1; /* Take remaining space */
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 700px;
+            height: 500px;
+            
+        }
+</style>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <!-- Add your logo image here -->
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="products_1.html">MENU</a>
+            <a href="#guide">GUIDE</a>
+            <a href="#faq">FAQs</a>
+            <a href="#review">REVIEW</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#blogs">BLOGS</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn" style="font-size:20px;"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn" style="font-size:20px;"></div>
+        </div>
+
+        <div class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="Search...">
+        </div>
+
+    </header>
+
+
+    <div class="container">
+        <div class="content">
+            <h2>How to Make Iced Latte and Iced Americano</h2>
+        </div>
+        <div class="image">
+            <img src="americano.jpeg" alt="Sample Image">
+             
+</div>
+   
+    </div>
+
+    <div style="margin-left: 600px;margin-right: 100px;" >
+        <h2>Iced Latte and Iced Americano: what it is and why we love it</h2>
+<p>There is nothing we crave more on a hot summer’s day than an iced filter coffee! The technique we use at Market Lane Coffee is known as ‘Japanese-style iced pour over’. It’s made by brewing a strong pour over coffee directly onto ice. Brewing hot coffee straight onto ice means that the brew is cooled and diluted at the same time. This produces a delicious, cold filter coffee. We prefer this method over ‘cold brew’, as it retains more of the coffee’s acidity and sweetness.</p>
+</div>  
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>What you'll need</h2>
+        <ul>
+            <li>Market Lane pour over cone</li>
+            <li>Pour over filter papers</li>
+            <li>Ice</li>
+            <li>Kettle, scales and timer</li>
+            <li>A jug to brew into</li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Recipe</h2>
+        <ul>Makes 2 servings
+            <li>30g coffee (roasted for filter)</li>
+            <li>200g ice cubes, and extra for serving</li>
+            <li>300g water</li>
+            <li>Total brew time: 4 minutes</li>
+            <li>Grind size: A little finer than your usual pour over setting </li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Steps</h2>
+        <ol>
+            <li>Start with at least 500g of fresh water and bring to the boil. While waiting for the water to boil, weigh and grind your coffee. 
+            </li>
+            <li>Fold the filter paper along each seam, open and place in the cone. Pour some boiled water through to rinse the paper and warm the cone, and let it drain in the sink.
+            </li>
+            <li>Place the ice in your serving jug. Put the paper-lined filter cone on the jug, and put your ground coffee into the cone. Then pop the entire set-up on the scales and tare to zero.
+            </li>
+            <li>Start your timer and pour just enough water to cover all the coffee, then leave the fresh coffee to ‘bloom’ for about 30 seconds. You can bloom with about twice the weight of the coffee, so in this case, about 60-80g of water. This bloom period helps the coffee to de-gas and rearrange itself into an even bed, allowing for an even extraction.
+            </li>
+            <li>Continue to slowly add the rest of the boiled water to the coffee, topping up frequently. It should take about 3 minutes to add the entire 300g of boiling water, and about 4 minutes to draw down completely.
+
+            </li>
+            <li>Once the water has filtered through the coffee, remove the filter cone and give the coffee brew a good stir. The ice should be almost completely dissolved and the coffee should be cool in temperature.
+
+            </li>
+            <li>Serve in a glass filled with ice, and enjoy!</li>
+        </ol>
+</div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> .header {
+    background: black;
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a {
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form.active {
+    display: block;
+}
+
+.search-form input[type="search"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+body {
+            
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 100px;
+            display: flex;
+            align-items: center; /* Vertical alignment */
+            justify-content: space-around; /* Horizontal alignment */
+            padding-left: 200px;
+            padding-right:200px;
+        }
+
+        .content {
+            flex: 1; /* Take remaining space */
+            padding-right: 20px; /* Add some spacing */
+        }
+
+        .content h2 {
+            margin-top: 0;
+            font-size: 40px;
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .image {
+            flex: 1; /* Take remaining space */
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 700px;
+            height: 500px;
+            
+        }
+</style>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <!-- Add your logo image here -->
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="products_1.html">MENU</a>
+            <a href="#guide">GUIDE</a>
+            <a href="#faq">FAQs</a>
+            <a href="#review">REVIEW</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#blogs">BLOGS</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn" style="font-size:20px;"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn" style="font-size:20px;"></div>
+        </div>
+
+        <div class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="Search...">
+        </div>
+
+    </header>
+
+
+    <div class="container">
+        <div class="content">
+            <h2>How to Make French Press</h2>
+        </div>
+        <div class="image">
+            <img src="french press recipe.jpeg" alt="Sample Image">
+             
+</div>
+   
+    </div>
+
+    <div style="margin-left: 600px;margin-right: 100px;" >
+        <h2>French Press: What it is and why we love it</h2>
+<p>For many, French Press brewing is one of the best and easiest ways to enjoy coffee. The French press (or press pot) was probably developed in France in 1850 and has since firmly established itself in the ranks of filter coffee brewing methods. It is inexpensive to purchase - depending on the brand - and you don't need any other accessories, such as paper filters or the like, which makes the Frenchpress a very environmentally friendly brewing method. Some of us may have already relegated the pot to the furthest nirvana of the kitchen cupboard, because it usually only vaguely met the morning coffee expectations.</p>
+</div>  
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>What you'll need</h2>
+        <ul>
+            <li>coffee machine</li>
+            <li>french press grinder</li>
+            <li>Scales and tamper</li>
+            <li>Timer</li>
+            <li>Coffee (roasted for French Press)</li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Recipe</h2>
+        <ul>Makes one strong coffee, or two weak coffees
+            <li>Ground coffee weight: 17-18g*</li>
+            <li>500g water</li>
+            <li>31g freshly ground coffee</li>
+            <li>Water temperature: 95°C</li>
+            <li>Grind size: fine  </li>
+
+        </ul>
+</div>
+<div style="margin-left: 600px;margin-right: 100px;" >
+    <h2>Steps</h2>
+        <ol>
+            <li>First weigh out your coffee beans. The basic brew ratio for French Press coffee is 1:16. This means that 16 parts of water are used for 1 part of coffee powder. So if you want to brew a liter of coffee, you use about 62 g of coffee powder, for 500 g of water you need 31 g, and so on. This is a helpful guideline for now, which you can adjust depending on your coffee and preferences.
+            </li>
+            <li>The right grind is a decisive criterion for a successful French Press coffee. The goal in coffee preparation should always be to optimally extract the aromas and ingredients of the coffee bean with water and thus produce a balanced coffee with a harmonious taste. For all coffee nerds among you who want to know exactly: Ideally, 18 to 22% of the aroma substances should be extracted from the coffee. This creates a balanced relationship between aroma and strength.
+            </li>
+            <li>Bring the water to a boil and then let it cool down for 30 to 40 seconds so that the water temperature is about 92°C. If the water is too hot, unpleasant odors will appear. If the water is too hot, unwanted bitter substances will be dissolved from the coffee. Now fill half of the hot water evenly into the French Press, stir briefly with the wooden spoon to wet all of the coffee powder with water, and add the second half of the water.
+            </li>
+            <li>Keep the brewing time to 4 minutes. The best way to do this is to set a timer immediately after you have poured all the water. Your coffee can taste bitter and over-extracted very quickly if you exceed the brew time.
+            </li>
+            <li>
+                Now don't let the coffee sit too long in the French Press pot to avoid further extraction. It is best to serve it right away or transfer it to a coffee pot.
+            </li>
+        </ol>
+</div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordian</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8b47731e6f.js" crossorigin="anonymous"></script>
+    <STYle>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+        :root{
+            --main-color:#d3ad7f;
+            --border:.1rem solid rgba(255,255,255,.3);
+        }
+        
+        *{
+            font-family: 'Roboto', sans-serif;
+            margin:0; padding:0;
+            box-sizing: border-box;
+            outline: none; border:none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+        
+        html{
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 9rem;
+            scroll-behavior: smooth;
+        }
+        
+        html::-webkit-scrollbar{
+            width: .8rem;
+        }
+        
+        html::-webkit-scrollbar-track{
+            background: transparent;
+        }
+        
+        html::-webkit-scrollbar-thumb{
+            background: #fff;
+            border-radius: 5rem;
+        }
+        
+        
+        section{
+            padding:2rem 7%;
+        }
+        
+        .heading{
+            text-align: center;
+            color:#fff;
+            text-transform: uppercase;
+            padding-bottom: 3.5rem;
+            font-size: 4rem;
+        }
+        
+        .heading span{
+            color:var(--main-color);
+            text-transform: uppercase;
+        }
+        
+        .btn{
+            margin-top: 1rem;
+            display: inline-block;
+            padding:.9rem 3rem;
+            font-size: 1.7rem;
+            color:#fff;
+            background: var(--main-color);
+            cursor: pointer;
+        }
+        
+        .btn:hover{
+            letter-spacing: .2rem;
+        }
+        
+        .header{
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:1.5rem 7%;
+            border-bottom: var(--border);
+            position: fixed;
+            top:0; left: 0; right: 0;
+            z-index: 1000;
+            height: 100px;
+        }
+        
+        .header .logo img{
+            height: 6rem;
+        }
+        
+        .header .navbar a{
+            margin:0 1rem;
+            font-size: 2rem;
+            color:#fff;
+        }
+        
+        .header .navbar a:hover{
+            color:var(--main-color);
+            border-bottom: .1rem solid var(--main-color);
+            padding-bottom: .5rem;
+            
+        }
+        
+        .header .icons div{
+            color:#fff;
+            cursor: pointer;
+            font-size: 2.5rem;
+            margin-left: 2rem;
+        }
+        
+        .header .icons div:hover{
+            color:var(--main-color);
+        }
+        
+        #menu-btn{
+            display: none;
+        }
+        
+        .header .search-form{
+            position: absolute;
+            top:115%; right: 7%;
+            background: #fff;
+            width: 50rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+        
+        .header .search-form.active{
+            transform: scaleY(1);
+        }
+        
+        .header .search-form input{
+            height: 100%;
+            width: 100%;
+            font-size: 1.6rem;
+            color:var(--black);
+            padding:1rem;
+            text-transform: none;
+        }
+        
+        .header .search-form label{
+            cursor: pointer;
+            font-size: 2.2rem;
+            margin-right: 1.5rem;
+            color:var(--black);
+        }
+        
+        .header .search-form label:hover{
+            color:var(--main-color);
+        }
+        
+        .header .cart-items-container{
+            position: absolute;
+            top:100%; right: -100%;
+            height: calc(100vh - 9.5rem);
+            width: 35rem;
+            background: #fff;
+            padding:0 1.5rem;
+        }
+        
+        .header .cart-items-container.active{
+            right: 0;
+        }
+        
+        .header .cart-items-container .cart-item{
+            position: relative;
+            margin:2rem 0;
+            display: flex;
+            align-items: center;
+            gap:1.5rem;
+        }
+        
+        .header .cart-items-container .cart-item .fa-times{
+            position: absolute;
+            top:1rem; right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--black);
+        }
+        
+        .header .cart-items-container .cart-item .fa-times:hover{
+            color:var(--main-color);
+        }
+        
+        .header .cart-items-container .cart-item img{
+            height: 7rem;
+        }
+        
+        .header .cart-items-container .cart-item .content h3{
+            font-size: 2rem;
+            color:var(--black);
+            padding-bottom: .5rem;
+        }
+        
+        .header .cart-items-container .cart-item .content .price{
+            font-size: 1.5rem;
+            color:var(--main-color);
+        }
+        
+        .header .cart-items-container .btn{
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* .home{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:url(../images/home-img.jpeg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        } */
+        
+        .home .content{
+            max-width: 60rem;
+        }
+        
+        .home .content h3{
+            font-size: 6rem;
+            text-transform: uppercase;
+            color:#fff;
+        }
+        
+        .home .content p{
+            font-size: 2rem;
+            font-weight: lighter;
+            line-height: 1.8;
+            padding:1rem 0;
+            color:#eee;
+        }
+        
+        .about .row{
+            display: flex;
+            align-items: center;
+            background:var(--black);
+            flex-wrap: wrap;
+        }
+        
+        .about .row .image{
+            flex:1 1 45rem;
+        }
+        
+        .about .row .image img{
+            width: 100%;
+        }
+        .about .row .content{
+            flex:1 1 45rem;
+            padding:2rem;
+        }
+        
+        .about .row .content h3{
+            font-size: 3rem;
+            color:#fff;
+        }
+        
+        .about .row .content p{
+            font-size: 1.6rem;
+            color:#ccc;
+            padding:1rem 0;
+            line-height: 1.8;
+        }
+        
+        .menu .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap:1.5rem;
+        }
+        
+        .menu .box-container .box{
+            padding:5rem;
+            text-align: center;
+            border:var(--border);    
+        }
+        
+        .menu .box-container .box img{
+            height: 10rem;
+        }
+        
+        .menu .box-container .box h3{
+            color: #fff;
+            font-size: 2rem;
+            padding:1rem 0;
+        }
+        
+        .menu .box-container .box .price{
+            color: #fff;
+            font-size: 2.5rem;
+            padding:.5rem 0;
+        }
+        
+        .menu .box-container .box .price span{
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            font-weight: lighter;
+        }
+        
+        .menu .box-container .box:hover{
+            background:#fff;
+        }
+        
+        .menu .box-container .box:hover > *{
+            color:var(--black);
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        /* media queries  */
+        @media (max-width:991px){
+        
+            html{
+                font-size: 55%;
+            }
+        
+            .header{
+                padding:1.5rem 2rem;
+            }
+        
+            section{
+                padding:2rem;
+            }
+        
+        }
+        
+        @media (max-width:768px){
+        
+            #menu-btn{
+                display: inline-block;
+            }
+        
+            .header .navbar{
+                position: absolute;
+                top:100%; right: -100%;
+                background: #fff;
+                width: 30rem;
+                height: calc(100vh - 9.5rem);
+            }
+        
+            .header .navbar.active{
+                right:0;
+            }
+        
+            .header .navbar a{
+                color:var(--black);
+                display: block;
+                margin:1.5rem;
+                padding:.5rem;
+                font-size: 2rem;
+            }
+        
+            .header .search-form{
+                width: 90%;
+                right: 2rem;
+            }
+        
+            .home{
+                background-position: left;
+                justify-content: center;
+                text-align: center;
+            }
+        
+            .home .content h3{
+                font-size: 4.5rem;
+            }
+        
+            .home .content p{
+                font-size: 1.5rem;
+            }
+        
+        }
+        
+        @media (max-width:450px){
+        
+            html{
+                font-size: 50%;
+            }
+        
+        }
+        @media only screen and (max-width: 768px) {
+            .coffee {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        
+        }
+        
+        body{
+            background-color: black;
+            color:white;
+            padding: 70px;
+            font-size:large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 1.8rem;
+        }
+        .section{
+            min-height: 100vh;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title{
+            font-size: 8rem;
+            color: #d3ad7f;
+            margin: 6rem 8rem;
+            text-align: center;
+            padding: auto;
+        }
+        .title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #151511; 
+        }
+        .FAQ{
+            backdrop-filter: blur(5px);
+            color: #d3ad7f;
+            padding: 4px 16px;
+            margin-bottom: 8px;
+            border-bottom: black;
+            border-radius: 8px;
+            box-shadow: 1px 1px 8px rgb(from rgb(63, 60, 60) r g b);
+            cursor: pointer;
+            border-left: 2px solid #000;
+            border-right: 2px solid #000; 
+            padding: 20px;
+            
+        }
+        .FAQ:not(:last-child) {
+            margin-bottom: 20px; 
+        }
+        .content-at-right {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:larger;
+            line-height: 2,.0rem;
+            width: 100%; 
+            padding: 40px; 
+        }
+        .question{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: xx-large;
+        }
+        .icon.rotate {
+            float: right;    
+            margin-right: 8px;
+            transform: rotate(180deg);
+            transition: transform 0.5s ease-in;
+            padding: auto;
+        }
+        
+        
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s  ease-in-out; 
+            opacity: 0;
+            font-size: 1.6rem;
+        }
+        .answer.active{
+            max-height:  300px;
+            padding: auto;
+            opacity: 1;
+        }
+        .premium-question {
+            text-align: center;
+            color: #d3ad7f;
+            padding-top: 10px;
+            margin-top: 50px;
+        }
+        
+        .premium-question-content {
+            align-items: center;
+            justify-content: start;
+            backdrop-filter: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .premium-question {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .premium-question-content {
+            max-width: 600px;
+            margin: 0 auto;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+        }
+        
+        .question-box {
+            display: none;
+            backdrop-filter: blur(5px);
+            margin-top: 20px;
+        }
+        
+        .question-box textarea {
+            width: 100%;
+            height: 100px;
+            background-color: wheat;
+            border-color: #151511;
+            color: #151511;
+            padding: 10px;
+            outline: none;
+            border: 2px solid transparent;
+            font-size: 10px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            transition: all 0.2s;
+            resize: none;
+        }
+        .question-box textarea:hover{
+            background-color:white;
+            color: #000;
+        }
+        .question-box textarea:focus{
+            cursor: text;
+            border-color:  rgb(21, 20, 20);
+            color: #000;
+        
+        }
+        .premium-question {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .premium-question-content {
+            max-width: 600px;
+            margin: 0 auto;
+            
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Drop shadow */
+        }
+        
+        .question-box {
+            display: none;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 40px;
+        }
+        
+        .question-box textarea {
+            font-size: larger;
+            font-weight: 400;
+            border-radius: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 100%;
+            height: 100px;
+            padding: auto;
+            resize: none;
+        }
+        
+        .question-box button {
+            margin-top: 10px;
+            padding: 10px 16px;
+            background-color: #000;
+            color: white;
+            transform: scale(1.05);
+            transition: 0.2s;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .question-box button:hover {
+            transform: scale(1.05);
+            background-color:wheat;
+            color: #000;
+            color: var(--main-colour);
+            border: 2px solid var(--main-colour);
+        
+        }
+        .btn{
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background:black;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            color: white;
+            border: 2px solid transparent;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .btn:hover{
+            transform: scale(1.05);
+            background-color:#ccc;
+            color: var(--main-colour);
+            border: 2px solid var(--main-colour);
+        
+        }</STYle>
+    
+</head>
+<body><section>
+    <header class="header" style="background: #000000fe;">
+
+        <a href="#" class="logo">
+            <img src="" alt="">
+        </a>
+    
+        <nav class="navbar">
+            <a href="homepg_2.html">HOME</a>
+            <a href="products_1.html">MENU</a>
+            <a href="nav bar code.html">GUIDE</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="review.html">REVIEW</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="login page.html">LOGIN</a>
+          </nav>
+    
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="gesia_cf.jpg" alt="">
+                <div class="content">
+                    <h3>cart item 01</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="harar_cf.jpg" alt="">
+                <div class="content">
+                    <h3>cart item 02</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="boubon_cf.jpg" alt="">
+                <div class="content">
+                    <h3>cart item 03</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="closeup_cf.jpg" alt="">
+                <div class="content">
+                    <h3>cart item 04</h3>
+                    <div class="price">$15.99/-</div>
+                </div>
+            </div>
+            <a href="#" class="btn">checkout now</a>
+        </div>
+    
+    </header>
+    
+    <h1 class="title" ><i>FAQ's</i></h1>
+    <div class="content-at-right">
+        <p><i><h4>Welcome
+             to the FAQ's page of Coffee House ! We understand that you may have questions about our offerings, policies, and services, and we're here to provide you with all the answers you need. Whether you're curious about our coffee selection, our commitment to sustainability, or our operating hours, this page is designed to address your inquiries comprehensively. Explore our frequently asked questions below to learn more about what makes Coffee House a favorite destination for coffee enthusiasts. If you don't find the information you're looking for, feel free to reach out to our friendly staff, who are always eager to assist you. Thank you for choosing Coffee House let's dive into the world of coffee together!
+            </h4> </i></p>
+    
+    </div>
+</section>
+
+    <div class="FAQ">
+        <div class="question">
+            <b><i>What are the different types of coffee beans?</i></b>
+            
+                <path d="M3 3L21 21L39 3" stroke="white" stroke width="7" stroke-linecap="round"/>
+            </svg>
+            <i class="icon  fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i>main types of coffee beans are Arabica and Robusta. Arabica beans are known for their smooth, nuanced flavor and are typically grown at higher altitudes. Robusta beans have a stronger, more bitter flavor and contain more caffeine. There are also less common varieties such as Liberica and Excelsa, but they make up a smaller portion of the market.</i></p>
+        </div>
+    </div>
+    <div class="FAQ">
+        <div class="question">
+           <b> <i>How is coffee grown and harvested?</i></B>
+            <i class="icon fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i>Coffee is typically grown in tropical regions around the world. It starts as a seedling, often grown in nurseries before being transplanted to shaded areas. The coffee plant requires specific conditions like well-drained soil, altitude, and consistent temperatures. After several years, the plant begins to produce cherries. These cherries ripen at different times, so harvesting is usually done by hand, selectively picking ripe cherries. Once harvested, the cherries are processed to extract the coffee beans inside, which are then dried and sorted for export.</i></p>
+        </div>
+    </div>
+    <div class="FAQ">
+        <div class="question">
+           <b> <i>What is the difference between Arabica and Robusta coffee beans?</i></b>
+            <i class="icon fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i> Arabica beans are known for their smoother, more nuanced flavor and are typically grown at higher altitudes. Robusta beans have a stronger, more bitter flavor and contain more caffeine.</i></p>
+        </div>
+    </div>
+    <div class="FAQ">
+        <div class="question">
+            <b><i>How is coffee roasted, and how does it affect the flavor?</i></b>
+            <i class="icon fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i>Coffee beans are roasted at high temperatures to develop their flavor and aroma. The roasting process involves heating the beans until they reach a specific internal temperature, causing chemical changes that release oils and sugars. The duration and temperature of roasting determine the flavor profile, with lighter roasts retaining more of the bean's original characteristics and darker roasts developing richer, more caramelized flavors. Roasting also affects acidity and body, leading to a wide range of flavor profiles in coffee.</i></p>
+        </div>
+    </div>
+    <div class="FAQ">
+        <div class="question">
+            <b><i>What are the main factors that influence the taste of coffee?</i></b>
+            <i class="icon fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i>The taste of coffee is influenced by factors such as the type of bean, where it's grown, how it's processed and roasted, the grind size, water quality, brewing method, ratio of coffee to water, brewing temperature, and storage conditions.</i></p>
+        </div>
+    </div>
+    <div class="FAQ">
+        <div class="question">
+            <b><i>How should I store coffee beans to keep them fresh?</i></b>
+            <i class="icon fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i>To keep coffee beans fresh, store them in an airtight container in a cool, dark place, away from moisture, heat, and light. Avoid storing them in the refrigerator or freezer, as they can absorb moisture and odors. It's best to buy whole beans and grind them just before brewing to preserve freshness.</i></p>
+        </div>
+    </div>
+    <div class="FAQ">
+        <div class="question">
+            <b><i>What is the best grind size for different brewing methods?</i></b>
+            <i class="icon fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i>The best grind size for different brewing methods varies to achieve optimal flavor extraction. For French press, a coarse grind is ideal to prevent over-extraction and sediment in the brew. Drip coffee makers work best with a medium-coarse grind to ensure proper extraction without clogging the filter. Pour-over methods benefit from a medium grind, allowing water to flow evenly through the coffee grounds for balanced flavor. Espresso machines require a fine grind to create the necessary pressure and extract rich flavors efficiently. Adjusting grind size ensures the right balance of extraction and flavor for each brewing method.</i>
+            </p>
+        </div>
+    </div>
+    <div class="FAQ">
+        <div class="question">
+            <b><i>Can coffee have health benefits?</i></b>
+            <i class="icon fa-solid fa-sort-down"></i>
+        </div>
+        <div class="answer">
+            <p><i> Yes, coffee can have health benefits. Research suggests that moderate coffee consumption may be associated with a reduced risk of certain conditions, such as type 2 diabetes, Parkinson's disease, and certain types of cancer. Additionally, cosffee contains antioxidants and other bioactive compounds that may have protective effects on health. However, individual responses to coffee can vary, and excessive consumption can lead to negative effects such as insomnia or increased heart rate. It's important to consume coffee in moderation as part of a balanced diet.</i></p>
+        </div>
+    </div> 
+    <div class="blur-background"></div>
+
+    <section>
+    </section>
+    <section class="premium-question">
+        <div class="premium-question-content">
+            <h2 class="premium-heading">Query Box</h2>
+            <p><i>Have a question that's not covered in our FAQ? Want to know more about our premium coffee blends or specialty drinks? Feel free to ask us anything! Our dedicated team of coffee experts is here to provide you with personalized assistance and ensure you have the best coffee experience possible.</i></p>
+            <button class="btn" onclick="toggleQuestionBox()">Ask a Question</button>
+            <div class="question-box" id="questionBox">
+                <textarea plasceholder="Type your question here..."></textarea>
+                <button onclick="submitQuestion()">Submit</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleQuestionBox() {
+            var questionBox = document.getElementById('questionBox');
+            questionBox.style.display = questionBox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function submitQuestion() {
+            var questionTextArea = document.querySelector('.question-box textarea');
+            var question = questionTextArea.value.trim();
+            if (question !== '') {
+                alert('Question submitted: ' + question);
+                questionTextArea.value = '';
+            } else {
+                alert('Please enter your question before submitting.');
+            }
+        }
+    </script>
+    <script>
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+                const icon = question.querySelector('.icon');
+                icon.classList.toggle('rotate');
+
+                const answerHeight = answer.scrollHeight;
+                answer.style.maxHeight = answer.classList.contains('active') ? answerHeight + 'px' : 0;
+             
+            });
+        });
+    </script>
+</body>
+</html>

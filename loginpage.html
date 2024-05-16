@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(Espresso\ 12.jpeg); /* Background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            backdrop-filter: blur(5px);
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .custom-card {
+            width: 24rem;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            background-color:transparent /* Background color of the card (with opacity) */
+            color: #fff; /* Text color */
+           
+        }
+        .card-img-top {
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .custom-btn {
+            background-color: #A0522D; /* Brown color */
+            color: #fff;
+            border: none;
+            padding: 8px 16px; /* Adjusted padding */
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px; /* Adjusted font size */
+            transition: background-color 0.3s ease;
+        }
+        .custom-btn:hover {
+            background-color: #7B3F00; /* Darker brown on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container center">
+    <div class="card custom-card">
+        <img src="lofinbg1.jpg" class="card-img-top" alt="Coffee House Logo">
+        <div class="card-body">
+            <div class="row">
+                <div class="col text-left">
+                    <a href="#" class="btn btn-primary custom-btn">Sign In</a>
+                </div>
+                <div class="col text-right">
+                    <a href="#" class="btn btn-secondary custom-btn">Create Account</a>
+                </div>
+            </div>
+            <form id="signInForm">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary custom-btn">Submit</button>
+            </form>
+            <form id="createAccountForm" style="display: none;">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label for="emailCreate">Email address</label>
+                    <input type="email" class="form-control" id="emailCreate" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="passwordCreate">Password</label>
+                    <input type="password" class="form-control" id="passwordCreate" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn btn-primary custom-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery (optional but recommended) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Automatically display Sign In form
+        $("#signInForm").show();
+        
+        $("a.btn-primary").click(function() {
+            $("#signInForm").toggle();
+            $("#createAccountForm").hide();
+        });
+        $("a.btn-secondary").click(function() {
+            $("#createAccountForm").toggle();
+            $("#signInForm").hide();
+        });
+    });
+</script>
+</body>
+</html>

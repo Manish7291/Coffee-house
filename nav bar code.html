@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+        :root {
+            --main-color: #d3ad7f;
+            --bg: ;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header {
+            background: black;
+            padding: 1.5rem 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .header .navbar a {
+            color: #fff;
+            margin: 0 1rem;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .header .navbar a:hover {
+            color: var(--main-color);
+            border-bottom: .1rem solid var(--main-color);
+            padding-bottom: .5rem;
+        }
+
+        .header .icons div {
+            color: #fff;
+            cursor: pointer;
+            font-size: 2.5rem;
+            margin-left: 2rem;
+        }
+
+        .header .icons div:hover {
+            color: var(--main-color);
+        }
+
+        .search-form {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-form.active {
+            display: block;
+        }
+
+        .search-form input[type="search"] {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .main-content {
+            position: relative;
+        }
+        .main-content img {
+  filter: blur(8px); /* Adjust the blur value as needed */
+}
+
+        .content-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color:yellow;
+        }
+        .card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-left: 5px;
+}
+
+.card {
+  width: 30%;
+  overflow: hidden;
+  background-color:black;
+  color: white;
+}
+
+.card img {
+  width:450px;
+  height: 300px;
+}
+
+.card-content {
+    padding-top: 8px;
+  padding-bottom:8px;
+  
+  background-color:black ;
+}
+
+.card-content p {
+  font-size: 20px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: flex-start; /* Align button to the left */
+  align-items: center;
+  width: 25%; 
+  height:6%;/* Reduced button size */
+  padding: 6px; /* Reduced padding */
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #f05e8a; /* Default button color */
+  color: #000; /* Default button text color */
+  text-decoration: none;
+  border: 1px solid #000; /* Default border color */
+ /* Slightly rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+  border-radius: 10px;
+  
+}
+
+.card-button:hover {
+  background-color: #000; /* Black background on hover */
+  color: #fff; /* White text on hover */
+  border-color: #fff; /* White border on hover */
+}
+
+
+
+        
+    </style>
+</head>
+
+<body style="background-color: #000;">
+    <!-- Header section -->
+    <header class="header">
+
+        <a href="#" class="logo">
+            <!-- Add your logo image here -->
+        </a>
+
+        <nav class="navbar">
+          <a href="homepg_2.html">HOME</a>
+          <a href="products_1.html">MENU</a>
+          <a href="nav bar code.html">GUIDE</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="review.html">REVIEW</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="login page.html">LOGIN</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn" style="font-size:20px;"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn" style="font-size:20px;"></div>
+        </div>
+
+        <div class="search-form" id="search-form">
+            <input type="search" id="search-box" placeholder="Search...">
+        </div>
+
+    </header>
+    <div class="main-content">
+        <img src="m1.jpeg" height="770px" width="1515px"style="margin-top:75px;">
+        <div class="content-overlay">
+            <h1 style="font-size: 60px;" >THE BREW GUIDE</h1>
+            <p style="font-size: 40px;margin-top: -20px;">These guides serve as a good place to start</p>
+        </div>
+    </div>
+    
+<div class="card-container">
+    <div class="card">
+      <img src="esspresso1.jpeg" alt="Card Image 1">
+      <div class="card-content">
+        <p>How to Make Espresso Coffee</p>
+      </div>
+      <a href="espresso recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  
+    <div class="card">
+      <img src="pourovercoffee.jpeg" alt="Card Image 2">
+      <div class="card-content">
+        <p>How to Make Pour Over Coffee</p>
+      </div>
+      <a href="pour coffee recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  
+    <div class="card">
+      <img src="filtercoffee.jpeg" alt="Card Image 3">
+      <div class="card-content">
+        <p>How to Make Iced Filter Coffee</p>
+      </div>
+      <a href="french press coffee recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card">
+      <img src="plungercoffee.jpeg" alt="Card Image 1">
+      <div class="card-content">
+        <p>How to Make Plunger Coffee</p>
+      </div>
+      <a href="Plunger coffee recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  
+    <div class="card">
+      <img src="mocha.jpeg" alt="Card Image 2">
+      <div class="card-content">
+        <p>How to Make Mocha</p>
+      </div>
+      <a href="mochacoffee reecipee.html" class="card-button">Get The Recipe</a>
+    </div>
+  
+    <div class="card">
+      <img src="americano.jpeg" alt="Card Image 3">
+      <div class="card-content">
+        <p>How to Make Americano</p>
+      </div>
+      <a href="americano cooffee recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card">
+      <img src="americano2.jpeg" alt="Card Image 1">
+      <div class="card-content">
+        <p>How to Make Iced Latte and Iced Americano</p>
+      </div>
+      <a href="iced latte and iced americano recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  
+    <div class="card">
+      <img src="frenchpress2.jpeg" alt="Card Image 2">
+      <div class="card-content">
+        <p>How to Make French Press</p>
+      </div>
+      <a href="french press coffee recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  
+    <div class="card">
+      <img src="cold brew.jpeg" alt="Card Image 3">
+      <div class="card-content">
+        <p>How to Make Cold Brew</p>
+      </div>
+      <a href="americano cooffee recipe.html" class="card-button">Get The Recipe</a>
+    </div>
+  </div>
+    <!-- Add your scripts here -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navbar = document.querySelector('.navbar');
+        const searchBtn = document.getElementById('search-btn');
+        const searchForm = document.getElementById('search-form');
+
+        menuBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        searchBtn.addEventListener('click', () => {
+            searchForm.classList.toggle('active');
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="jsfile.js"></script>
+</body>
+
+</html>
